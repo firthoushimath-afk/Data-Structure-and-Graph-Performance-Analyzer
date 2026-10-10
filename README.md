@@ -228,3 +228,162 @@ Implements the Graph using an adjacency list and provides vertex, edge, BFS, and
 
 Linear Search checks each Array element from the beginning until the target value is found or the Array ends.
 
+```text
+Best Case: O(1)
+Average Case: O(n)
+Worst Case: O(n)
+```
+
+### Binary Search
+
+Binary Search repeatedly divides the search range into two halves.
+
+Binary Search requires sorted data. The application creates a sorted copy of the Array before performing Binary Search.
+
+```text
+Best Case: O(1)
+Average Case: O(log n)
+Worst Case: O(log n)
+```
+
+Execution time may vary depending on the input size, Java Virtual Machine activity, and computer performance. The number of steps provides a clearer demonstration of the performance difference between the two searching algorithms.
+
+---
+
+## Graph Representation and Traversal
+
+The Graph is represented using an adjacency list.
+
+Example:
+
+```text
+A -> [B, C]
+B -> [A, C]
+C -> [A, B]
+D -> []
+```
+
+In this example:
+
+- `A`, `B`, `C`, and `D` are vertices.
+- Connections between the vertices are edges.
+- `D` is a disconnected vertex.
+
+### Breadth First Search
+
+BFS visits connected vertices level by level using a Queue.
+
+```text
+Start Vertex: A
+BFS Traversal: A B C
+```
+
+### Depth First Search
+
+DFS explores one path as deeply as possible before returning to visit other paths.
+
+DFS is implemented using recursion and a visited Set.
+
+```text
+Start Vertex: A
+DFS Traversal: A B C
+```
+
+A disconnected vertex does not appear in the traversal unless the traversal starts from that vertex or an edge connects it to the starting component.
+
+---
+
+## Input Validation and Error Handling
+
+The system handles:
+
+- Invalid Main Menu choices
+- Invalid Submenu choices
+- Non-integer input
+- Full Array
+- Value Not Found
+- Stack Overflow
+- Empty Stack
+- Queue Overflow
+- Empty Queue
+- Empty Linked List
+- Duplicate Graph Vertex
+- Invalid Graph Vertex
+- Empty Graph
+- Search Operations Before Adding Array Values
+- Displaying Search Results Before Performing a Search
+
+---
+
+## How to Compile and Run
+
+1. Open the project folder using Visual Studio Code.
+
+2. Open a terminal and navigate to the `src` folder:
+
+```bash
+cd src
+```
+
+3. Compile all Java files:
+
+```bash
+javac *.java
+```
+
+4. Run the integrated application:
+
+```bash
+java Main
+```
+
+5. Select an option from the Main Menu and follow the instructions displayed in the console.
+
+---
+
+## GitHub Collaboration
+
+GitHub was used for team collaboration and version control.
+
+The following branches were used:
+
+```text
+main
+array-performance
+stack-queue
+linkedlist-searching
+graph-traversal
+```
+
+The collaboration process included:
+
+- Separate development branches
+- Meaningful commits
+- Push operations
+- Pull Requests
+- Code reviews
+- Conflict resolution
+- Merging modules into the Main Branch
+- Final system integration
+
+---
+
+## GitHub Repository
+
+The complete source code, commits, branches, and Pull Request history are available at:
+
+```text
+https://github.com/firthoushimath-afk/Data-Structure-and-Graph-Performance-Analyzer
+```
+
+---
+
+## Conclusion
+
+The Data Structure and Graph Performance Analyzer successfully demonstrates the practical implementation of important data structures and algorithms using Java.
+
+The project includes Array, Stack, Queue, Linked List, Linear Search, Binary Search, Graph, BFS, and DFS operations. It also compares Linear Search and Binary Search using step counts and execution time.
+
+All modules were developed, reviewed, and integrated into a single menu-driven Java console application. GitHub branches, commits, Pull Requests, conflict resolution, and merging were used to support team collaboration.
+
+The completed system demonstrates data structure operations, searching algorithms, performance comparison, graph traversal, input validation, and error handling.
