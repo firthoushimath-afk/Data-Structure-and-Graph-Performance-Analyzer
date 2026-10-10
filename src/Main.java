@@ -95,13 +95,14 @@ public class Main {
 
                 case 5:
 
-                    System.out.println("\n========== PERFORMANCE COMPARISON ==========");
+                    System.out.println(
+                            "\n========== PERFORMANCE COMPARISON ==========");
 
-                    System.out.println("Linear Search Steps : "
-                            + LinearSearch.steps);
+                    System.out.println(
+                            "Linear Search Steps : " + LinearSearch.steps);
 
-                    System.out.println("Binary Search Steps : "
-                            + BinarySearch.steps);
+                    System.out.println(
+                            "Binary Search Steps : " + BinarySearch.steps);
 
                     break;
 
