@@ -6,101 +6,91 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
-        GraphManager graph = new GraphManager();
+        LinkedListManager list = new LinkedListManager();
 
         int choice;
 
         do {
 
             System.out.println("\n==============================");
-            System.out.println(" GRAPH TRAVERSAL MODULE ");
+            System.out.println(" LINKED LIST MODULE ");
             System.out.println("==============================");
-            System.out.println("1. Add Vertex");
-            System.out.println("2. Add Edge");
-            System.out.println("3. Display Graph");
-            System.out.println("4. BFS Traversal");
-            System.out.println("5. DFS Traversal");
-            System.out.println("6. Exit");
+            System.out.println("1. Insert");
+            System.out.println("2. Search");
+            System.out.println("3. Delete");
+            System.out.println("4. Display");
+            System.out.println("5. Exit");
             System.out.println("==============================");
             System.out.print("Enter Choice : ");
 
             choice = input.nextInt();
 
-            input.nextLine();
-
             switch (choice) {
 
                 case 1:
 
-                    System.out.print("Enter Vertex : ");
+                    System.out.print("Enter Value : ");
 
-                    String vertex =
-                            input.nextLine();
+                    int insertValue = input.nextInt();
 
-                    graph.addVertex(vertex);
+                    list.insert(insertValue);
+
+                    System.out.println("Value Inserted Successfully!");
 
                     break;
 
                 case 2:
 
-                    System.out.print("Source Vertex : ");
+                    System.out.print("Enter Value To Search : ");
 
-                    String source =
-                            input.nextLine();
+                    int searchValue = input.nextInt();
 
-                    System.out.print("Destination Vertex : ");
+                    if (list.search(searchValue)) {
 
-                    String destination =
-                            input.nextLine();
+                        System.out.println("Value Found!");
 
-                    graph.addEdge(source, destination);
+                    } else {
+
+                        System.out.println("Value Not Found!");
+                    }
 
                     break;
 
                 case 3:
 
-                    graph.displayGraph();
+                    System.out.print("Enter Value To Delete : ");
+
+                    int deleteValue = input.nextInt();
+
+                    if (list.delete(deleteValue)) {
+
+                        System.out.println("Value Deleted Successfully!");
+
+                    } else {
+
+                        System.out.println("Value Not Found!");
+                    }
 
                     break;
 
                 case 4:
 
-                    System.out.print(
-                            "Enter Start Vertex : ");
-
-                    String bfsStart =
-                            input.nextLine();
-
-                    graph.bfs(bfsStart);
+                    list.display();
 
                     break;
 
                 case 5:
 
-                    System.out.print(
-                            "Enter Start Vertex : ");
-
-                    String dfsStart =
-                            input.nextLine();
-
-                    graph.dfs(dfsStart);
-
-                    break;
-
-                case 6:
-
-                    System.out.println(
-                            "Exiting Program...");
+                    System.out.println("Exiting Program...");
 
                     break;
 
                 default:
 
-                    System.out.println(
-                            "Invalid Choice!");
+                    System.out.println("Invalid Choice!");
             }
 
-        } while (choice != 6);
+        } while (choice != 5);
 
         input.close();
     }
